@@ -8,8 +8,8 @@ export const personalInfo = {
   phone: '8056225925',
   website: 'aravindsubramanian.com',
   socials: {
-    linkedin: 'https://linkedin.com/in/aravind-subramanian-seo',
-    instagram: 'https://instagram.com/aravind_subramanian',
+    linkedin: 'https://www.linkedin.com/in/h-s-aravind-subramanian/',
+    instagram: 'https://www.instagram.com/scale_with_aravind/',
   },
   taglines: [
     'Organic Growth Partner',

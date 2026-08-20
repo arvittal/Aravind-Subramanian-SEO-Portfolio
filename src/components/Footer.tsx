@@ -1,4 +1,5 @@
 import { MouseEvent } from 'react';
+import { Linkedin, Instagram } from 'lucide-react';
 import { personalInfo } from '../data';
 
 export default function Footer() {
@@ -26,10 +27,33 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Center Credits / Links */}
-        <div className="text-xs text-gray-600 font-mono text-center">
-          <p>© {currentYear} {personalInfo.name}. All Rights Reserved.</p>
-          <p className="mt-1 text-gray-700">Calculated organic growth solutions.</p>
+        {/* Social Links & Center Credits */}
+        <div className="flex flex-col items-center gap-3 text-center">
+          <div className="flex items-center gap-3">
+            <a
+              id="footer-linkedin-link"
+              href={personalInfo.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-[#1C232B] border border-white/5 hover:border-growth/30 text-gray-400 hover:text-growth hover:bg-growth/5 transition-all flex items-center justify-center"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              id="footer-instagram-link"
+              href={personalInfo.socials.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-lg bg-[#1C232B] border border-white/5 hover:border-growth/30 text-gray-400 hover:text-growth hover:bg-growth/5 transition-all flex items-center justify-center"
+              aria-label="Instagram Profile"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+          </div>
+          <div className="text-xs text-gray-600 font-mono">
+            <p>© {currentYear} {personalInfo.name}. All Rights Reserved.</p>
+          </div>
         </div>
 
         {/* Back To Top Scroll anchor */}

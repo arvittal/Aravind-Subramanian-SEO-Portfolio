@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- Laptune Info Tech Logo Mark -->
+  <g transform="translate(6, 7)">
+    <rect x="2" y="4" width="30" height="20" rx="3" fill="#0EA5E9" fill-opacity="0.15" stroke="#0EA5E9" stroke-width="1.5"/>
+    <path d="M0 27H34" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 12L15 17L22 9" stroke="#00E5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="48" y="27" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    LAPTUNE
+  </text>
+  <text x="49" y="39" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#0EA5E9" letter-spacing="3">
+    INFO TECH
+  </text>
+</svg>

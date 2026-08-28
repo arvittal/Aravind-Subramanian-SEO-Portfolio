@@ -1,4 +1,4 @@
-import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem } from './types';
+import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem } from './types';
 
 export const personalInfo = {
   name: 'Aravind Subramanian',
@@ -192,4 +192,49 @@ export const toolsData: ToolItem[] = [
   { name: 'ChatGPT', category: 'AI Overview Optimization' },
   { name: 'N8N Automation', category: 'SEO Workflows & Scripting' },
   { name: 'Chatbot Integrations', category: 'User Engagement & Conversions' }
+];
+
+export const clientsData: ClientItem[] = [
+  {
+    id: 'pickyourtrail',
+    name: 'PickYourTrail',
+    logo: '/logos/pickyourtrail.svg',
+    alt: 'PickYourTrail Logo'
+  },
+  {
+    id: 'many2go',
+    name: 'Many2Go Family Holidays',
+    logo: '/logos/many2go.svg',
+    alt: 'Many2Go Family Holidays Logo'
+  },
+  {
+    id: 'laptune',
+    name: 'Laptune Info Tech',
+    logo: '/logos/laptune.svg',
+    alt: 'Laptune Info Tech Logo'
+  },
+  {
+    id: 'kings-next',
+    name: 'Kings Next Institute',
+    logo: '/logos/kings-next.svg',
+    alt: 'Kings Next Institute Logo'
+  },
+  {
+    id: 'tamayo-medical',
+    name: 'Tamayo Medical University',
+    logo: '/logos/tamayo-medical.svg',
+    alt: 'Tamayo Medical University Logo'
+  },
+  {
+    id: 'av-sumanth',
+    name: 'AV Sumanth Digital',
+    logo: '/logos/av-sumanth.svg',
+    alt: 'AV Sumanth Digital Logo'
+  },
+  {
+    id: 'eeat-minds',
+    name: 'EEAT Minds',
+    logo: '/logos/eeat-minds.svg',
+    alt: 'EEAT Minds Logo'
+  }
 ];

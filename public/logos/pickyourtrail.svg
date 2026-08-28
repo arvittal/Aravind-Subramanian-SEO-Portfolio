@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- Pickyourtrail Logo Mark -->
+  <g transform="translate(4, 7)">
+    <circle cx="18" cy="18" r="17" fill="#0070EB" fill-opacity="0.15" stroke="#0070EB" stroke-width="1.5"/>
+    <path d="M10 24C13 18 20 12 28 10C24 16 19 22 14 26" stroke="#00E5A0" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M28 10L25 15M28 10L22 11" stroke="#00E5A0" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="28" cy="10" r="2.5" fill="#FF7A00"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="48" y="31" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="21" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    pickyour<tspan fill="#00E5A0">trail</tspan>
+  </text>
+</svg>

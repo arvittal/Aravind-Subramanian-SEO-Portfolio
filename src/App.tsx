@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Clients from './components/Clients';
 import RankingsShowcase from './components/RankingsShowcase';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
@@ -16,7 +17,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    const sections = ['hero', 'about', 'rankings', 'skills', 'achievements', 'case-studies', 'work', 'tools', 'contact'];
+    const sections = ['hero', 'about', 'clients', 'rankings', 'skills', 'achievements', 'case-studies', 'work', 'tools', 'contact'];
     
     const handleScrollSpy = () => {
       const scrollPosition = window.scrollY + 120; // offset of header and buffer
@@ -57,6 +58,7 @@ export default function App() {
       <main className="flex-grow">
         <Hero />
         <About />
+        <Clients />
         <RankingsShowcase />
         <Skills />
         <Achievements />

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- EEAT Minds Logo Mark -->
+  <g transform="translate(6, 7)">
+    <circle cx="17" cy="18" r="16" fill="#00E5A0" fill-opacity="0.12" stroke="#00E5A0" stroke-width="1.5"/>
+    <path d="M11 23L17 11L23 23" stroke="#00E5A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17" cy="18" r="2" fill="#FFFFFF"/>
+    <path d="M7 18H11M23 18H27" stroke="#00E5A0" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="48" y="26" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    E-E-A-T<tspan fill="#00E5A0"> MINDS</tspan>
+  </text>
+  <text x="49" y="39" font-family="'Inter', system-ui, sans-serif" font-size="8" font-weight="600" fill="#9CA3AF" letter-spacing="2">
+    SEARCH AUTHORITY
+  </text>
+</svg>

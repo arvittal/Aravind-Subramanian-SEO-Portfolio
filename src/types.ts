@@ -38,3 +38,10 @@ export interface ToolItem {
   category: string;
   url?: string;
 }
+
+export interface ClientItem {
+  id: string;
+  name: string;
+  logo: string;
+  alt: string;
+}

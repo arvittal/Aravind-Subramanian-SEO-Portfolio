@@ -78,6 +78,18 @@ body {
   animation-play-state: paused;
 }
 
+.animate-marquee-clients {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translateZ(0);
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee-clients:hover {
+  animation-play-state: paused;
+}
+
 /* custom selection color */
 ::selection {
   background-color: rgba(0, 229, 160, 0.2);

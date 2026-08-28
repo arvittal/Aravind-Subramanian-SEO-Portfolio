@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" fill="none">
+  <!-- Many2Go Family Holidays Logo Mark -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="2" width="34" height="34" rx="8" fill="#FF5722" fill-opacity="0.15" stroke="#FF5722" stroke-width="1.5"/>
+    <path d="M9 25L17 11L25 25" stroke="#FF5722" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 20H22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="17" cy="18" r="2" fill="#00E5A0"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="50" y="27" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    MANY<tspan fill="#FF5722">2</tspan>GO
+  </text>
+  <text x="51" y="40" font-family="'Inter', system-ui, sans-serif" font-size="8.5" font-weight="600" fill="#9CA3AF" letter-spacing="2.5">
+    FAMILY HOLIDAYS
+  </text>
+</svg>

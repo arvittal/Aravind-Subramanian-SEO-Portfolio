@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="100%" height="100%" fill="none">
+  <!-- Clean Canvas Background matching Gemini Web Interface -->
+  <rect width="1000" height="550" rx="16" fill="#F8F9FA"/>
+  
+  <!-- User Prompt Pill at Top Right -->
+  <g transform="translate(540, 16)">
+    <rect x="0" y="0" width="265" height="42" rx="21" fill="#E8EAED"/>
+    <text x="132" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#202124" text-anchor="middle">
+      digital marketing freelancer in mumbai
+    </text>
+  </g>
+
+  <!-- Gemini Response Intro Paragraph -->
+  <text x="170" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#202124">
+    Hiring a digital marketing freelancer in Mumbai depends heavily on whether your goal is
+  </text>
+  <text x="170" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#202124">
+    performance ads, full-funnel growth, organic search (SEO), or social media branding.
+  </text>
+
+  <!-- Table Heading -->
+  <text x="170" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1F1F1F">
+    Notable Digital Marketing Freelancers in Mumbai
+  </text>
+
+  <!-- Table Structure -->
+  <g transform="translate(170, 178)">
+    <!-- Header Row -->
+    <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#444746">Freelancer</text>
+    <text x="150" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#444746">Core Specialization</text>
+    <text x="330" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#444746">Best For</text>
+    <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#444746">Key Channels / Focus</text>
+
+    <!-- Header Divider Line -->
+    <line x1="-12" y1="28" x2="680" y2="28" stroke="#E1E3E1" stroke-width="1"/>
+
+    <!-- Row 1: Aravind Subramanian (RANK #1) -->
+    <g transform="translate(0, 32)">
+      <rect x="-12" y="2" width="692" height="66" fill="#00E5A0" fill-opacity="0.04" stroke="#00E5A0" stroke-width="1.8" rx="2"/>
+      
+      <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1F1F1F">Aravind Subramanian</text>
+      
+      <text x="150" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">Growth Marketing &amp; Full-</text>
+      <text x="150" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">Funnel Strategy</text>
+
+      <text x="330" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">SaaS, D2C, and startups</text>
+      <text x="330" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">scaling past initial traction</text>
+
+      <text x="510" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">Data-backed SEO, paid</text>
+      <text x="510" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">performance, conversion</text>
+      <text x="510" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#1F1F1F">funnels</text>
+    </g>
+
+    <!-- Row 2: Mahendar Prajapati -->
+    <g transform="translate(0, 106)">
+      <line x1="-12" y1="0" x2="680" y2="0" stroke="#E1E3E1" stroke-width="1"/>
+      <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F1F1F">Mahendar Prajapati</text>
+      <text x="150" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">Full-Service Digital Marketing</text>
+      <text x="150" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">&amp; SEM</text>
+      <text x="330" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">SMEs and local brands</text>
+      <text x="330" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">wanting an end-to-end</text>
+      <text x="330" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">partner</text>
+      <text x="510" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">Google Ads (SEM), SEO,</text>
+      <text x="510" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">website UX, multi-channel</text>
+      <text x="510" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">growth</text>
+    </g>
+
+    <!-- Row 3: Digital Jainam Jain -->
+    <g transform="translate(0, 172)">
+      <line x1="-12" y1="0" x2="680" y2="0" stroke="#E1E3E1" stroke-width="1"/>
+      <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1F1F1F">Digital Jainam Jain</text>
+      <text x="150" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">Performance Marketing &amp;</text>
+      <text x="150" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">Paid Ads</text>
+      <text x="330" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">E-commerce and lead-gen</text>
+      <text x="330" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">campaigns needing fast</text>
+      <text x="330" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">ROAS</text>
+      <text x="510" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">Meta Ads, Google Ads</text>
+      <text x="510" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">remarketing, conversion rate</text>
+      <text x="510" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#444746">tracking</text>
+    </g>
+  </g>
+
+  <!-- Bottom Floating Gemini Search Bar -->
+  <g transform="translate(290, 480)">
+    <rect x="0" y="0" width="420" height="46" rx="23" fill="#FFFFFF" stroke="#E1E3E1" stroke-width="1" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.06))"/>
+    <path d="M22 17V29M16 23H28" stroke="#5F6368" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="38" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#747775">Ask Gemini</text>
+    <g transform="translate(298, 14)">
+      <circle cx="10" cy="9" r="8" fill="#E8F0FE"/>
+      <path d="M10 5L11 8L14 9L11 10L10 13L9 10L6 9L9 8L10 5Z" fill="#1A73E8"/>
+    </g>
+    <text x="332" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#444746">Flash</text>
+    <path d="M366 23L370 27L374 23" stroke="#5F6368" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M394 20C394 18.3 392.7 17 391 17C389.3 17 388 18.3 388 20V24C388 25.7 389.3 27 391 27C392.7 27 394 25.7 394 24V20Z" fill="#5F6368"/>
+    <path d="M386 23C386 25.8 388.2 28 391 28C393.8 28 396 25.8 396 23H398C398 26.5 395.4 29.4 392 29.9V32H390V29.9C386.6 29.4 384 26.5 384 23H386Z" fill="#5F6368"/>
+  </g>
+  <text x="500" y="538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#747775" text-anchor="middle">
+    Gemini is AI and can make mistakes.
+  </text>
+</svg>

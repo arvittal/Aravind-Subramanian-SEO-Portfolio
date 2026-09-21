@@ -236,5 +236,11 @@ export const clientsData: ClientItem[] = [
     name: 'EEAT Minds',
     logo: '/logos/eeat-minds.svg',
     alt: 'EEAT Minds Logo'
+  },
+  {
+    id: 'hitech-energy',
+    name: 'Hi Tech Energy',
+    logo: '/logos/hitech-energy.svg',
+    alt: 'Hi Tech Energy Logo'
   }
 ];

@@ -10,6 +10,11 @@ export default function About() {
     { name: 'Export & Import', icon: Globe, desc: 'Global supply keyword ranks & international indexing strategies' }
   ];
 
+  const savedPhoto = typeof window !== 'undefined' ? localStorage.getItem('aravind_hero_photo') : null;
+  const profilePhoto = savedPhoto && !savedPhoto.includes('aravind-portrait.svg')
+    ? savedPhoto
+    : '/aravind-hero.png';
+
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-dark-bg">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -45,7 +50,7 @@ export default function About() {
               {/* Profile Image/Avatar container */}
               <div className="relative w-28 h-28 rounded-2xl bg-[#1C232B] flex items-center justify-center border border-white/5 mb-6 overflow-hidden group-hover:border-growth/20 transition-all">
                 <img
-                  src="https://lh3.googleusercontent.com/d/16rxbX3CU6nOddxaeXjmyXyhdt7qLWaek"
+                  src={profilePhoto}
                   alt={personalInfo.name}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

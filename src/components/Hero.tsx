@@ -1,10 +1,18 @@
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, useEffect, MouseEvent, ChangeEvent, DragEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowDownRight, TrendingUp, Sparkles, CheckCircle2, Search, ArrowUpRight } from 'lucide-react';
+import { ArrowDownRight, TrendingUp, Sparkles, CheckCircle2, Search, ArrowUpRight, Camera, UploadCloud } from 'lucide-react';
 import { personalInfo } from '../data';
 
 export default function Hero() {
   const [taglineIndex, setTaglineIndex] = useState(0);
+  const [profilePhoto, setProfilePhoto] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('aravind_hero_photo');
+      if (saved && !saved.includes('aravind-portrait.svg')) return saved;
+    }
+    return '/aravind-hero.png';
+  });
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,6 +20,55 @@ export default function Hero() {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  const handlePhotoUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const result = event.target?.result as string;
+        if (result) {
+          setProfilePhoto(result);
+          try {
+            localStorage.setItem('aravind_hero_photo', result);
+          } catch {
+            // ignore quota errors
+          }
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const result = event.target?.result as string;
+        if (result) {
+          setProfilePhoto(result);
+          try {
+            localStorage.setItem('aravind_hero_photo', result);
+          } catch {
+            // ignore quota errors
+          }
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleScrollTo = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -36,7 +93,7 @@ export default function Hero() {
       {/* Profile Photo subtle ambient background */}
       <div className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none select-none mix-blend-luminosity">
         <img
-          src="https://lh3.googleusercontent.com/d/16rxbX3CU6nOddxaeXjmyXyhdt7qLWaek"
+          src={profilePhoto}
           alt="Aravind Subramanian Background"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center scale-105 filter saturate-50 brightness-75"
@@ -99,21 +156,52 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-64 sm:w-72 md:w-80 aspect-[3/4] rounded-[2.5rem] p-1.5 bg-[#14181E]/40 border border-white/10 backdrop-blur-sm shadow-2xl group hover:border-growth/30 hover:shadow-growth/5 transition-all duration-500 z-10"
+              onDragOver={handleDragOver}
+              onDragLeave={handleDragLeave}
+              onDrop={handleDrop}
+              className={`relative w-64 sm:w-72 md:w-80 aspect-square sm:aspect-[3/4] rounded-[2.5rem] p-1.5 bg-[#14181E]/40 border backdrop-blur-sm shadow-2xl group transition-all duration-500 z-10 ${
+                isDragging
+                  ? 'border-growth ring-4 ring-growth/20 scale-105'
+                  : 'border-white/10 hover:border-growth/40 hover:shadow-growth/10'
+              }`}
             >
-              <div className="w-full h-full rounded-[2.2rem] overflow-hidden bg-[#1C232B] relative">
+              <div className="w-full h-full rounded-[2.2rem] overflow-hidden bg-[#1C232B] relative flex items-center justify-center">
                 <img
-                  src="https://lh3.googleusercontent.com/d/16rxbX3CU6nOddxaeXjmyXyhdt7qLWaek"
+                  src={profilePhoto}
                   alt="Aravind Subramanian Portrait"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 
                 {/* Visual SEO subtle gradient card cover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-50 pointer-events-none" />
+
+                {/* Drag and Drop Prompt Overlay */}
+                {isDragging && (
+                  <div className="absolute inset-0 bg-dark-bg/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 text-center z-30">
+                    <UploadCloud className="w-10 h-10 text-growth animate-bounce mb-2" />
+                    <span className="text-sm font-display font-bold text-white">Drop Photo Here</span>
+                    <span className="text-xs text-gray-400 font-mono mt-1">PNG, JPG, or WEBP</span>
+                  </div>
+                )}
+
+                {/* Subtle Interactive Photo Changer Control on Hover */}
+                <label
+                  htmlFor="hero-photo-input"
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/80 hover:bg-black text-white text-[11px] font-mono px-3.5 py-1.5 rounded-full cursor-pointer flex items-center gap-1.5 z-20 border border-white/20 shadow-xl backdrop-blur-sm whitespace-nowrap"
+                  title="Upload or replace photo"
+                >
+                  <Camera className="w-3.5 h-3.5 text-growth" />
+                  <span>Update Photo</span>
+                  <input
+                    id="hero-photo-input"
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handlePhotoUpload}
+                  />
+                </label>
               </div>
-
-
 
               {/* Active Online Indicator sticker */}
               <span className="absolute top-6 right-6 flex h-3.5 w-3.5 rounded-full border-2 border-[#0B0D10] bg-growth z-20">

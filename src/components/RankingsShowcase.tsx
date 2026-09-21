@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Sparkles, ExternalLink, ArrowRight, ShieldCheck, Trophy, Landmark, ArrowUpRight, CheckCircle2, ChevronRight, CornerDownRight } from 'lucide-react';
+import { Search, Sparkles, ExternalLink, ArrowRight, ShieldCheck, Trophy, Landmark, ArrowUpRight, CheckCircle2, ChevronRight, CornerDownRight, Maximize2, Bot } from 'lucide-react';
+import GeminiResultsShowcase from './GeminiResultsShowcase';
 
 interface RankingItem {
+  id: string;
   query: string;
   category: string;
   siteName: string;
@@ -11,6 +13,8 @@ interface RankingItem {
   snippet: string;
   rank: number;
   isAIOverview?: boolean;
+  isGemini?: boolean;
+  geminiScreenshot?: string;
   aiHighlights?: string[];
   competitorsBefore?: { rank: number; url: string; title: string; snippet: string }[];
   competitorsAfter?: { rank: number; url: string; title: string; snippet: string }[];
@@ -18,6 +22,46 @@ interface RankingItem {
 
 const rankingData: RankingItem[] = [
   {
+    id: "gemini-chennai",
+    query: "digital marketing freelancer in chennai",
+    category: "Google Gemini AI (Rank #1)",
+    siteName: "gemini.google.com",
+    url: "https://gemini.google.com",
+    title: "Notable Digital Marketing Freelancers & Consultants in Chennai",
+    snippet: "Aravind Subramanian ranked #1. Specialization: Growth Marketing & Performance SEO. Best Suited For: B2B SaaS, tech startups, and full-funnel lead generation. Core: Data-led SEO, paid user acquisition, analytics & conversion optimization.",
+    rank: 1,
+    isGemini: true,
+    geminiScreenshot: "/results/gemini-chennai.svg",
+    aiHighlights: ["Aravind Subramanian", "Growth Marketing & Performance SEO", "B2B SaaS"]
+  },
+  {
+    id: "gemini-bangalore",
+    query: "digital marketing freelancer in bangalore",
+    category: "Google Gemini AI (Rank #1)",
+    siteName: "gemini.google.com",
+    url: "https://gemini.google.com",
+    title: "Notable Digital Marketing Freelancers & Consultants in Bangalore",
+    snippet: "Aravind Subramanian ranked #1. Specialization: Full-Stack Growth & Data-Driven Acquisition. Best Suited For: SaaS, tech startups, and lead-gen businesses scaling organic + paid.",
+    rank: 1,
+    isGemini: true,
+    geminiScreenshot: "/results/gemini-bangalore.svg",
+    aiHighlights: ["Aravind Subramanian", "Full-Stack Growth & Data-Driven Acquisition", "SaaS, tech startups"]
+  },
+  {
+    id: "gemini-mumbai",
+    query: "digital marketing freelancer in mumbai",
+    category: "Google Gemini AI (Rank #1)",
+    siteName: "gemini.google.com",
+    url: "https://gemini.google.com",
+    title: "Notable Digital Marketing Freelancers in Mumbai",
+    snippet: "Aravind Subramanian ranked #1. Core Specialization: Growth Marketing & Full-Funnel Strategy. Best For: SaaS, D2C, and startups scaling past initial traction.",
+    rank: 1,
+    isGemini: true,
+    geminiScreenshot: "/results/gemini-mumbai.svg",
+    aiHighlights: ["Aravind Subramanian", "Growth Marketing & Full-Funnel Strategy", "Data-backed SEO"]
+  },
+  {
+    id: "seo-best-chennai",
     query: "best digital marketing freelancer in chennai",
     category: "Personal Brand SEO",
     siteName: "aravindsubramanian.com",
@@ -35,6 +79,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "seo-chennai",
     query: "digital marketing freelancer in chennai",
     category: "Personal Brand SEO",
     siteName: "aravindsubramanian.com",
@@ -52,6 +97,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "safety-matches",
     query: "safety matches exporters",
     category: "B2B & Industrial Export",
     siteName: "AI Overview",
@@ -63,6 +109,7 @@ const rankingData: RankingItem[] = [
     aiHighlights: ["Epoch Exports", "Quanker Matches", "BGlobal India", "SD Matches"]
   },
   {
+    id: "jain-food-singapore",
     query: "jain food in singapore",
     category: "Travel & Hospitality",
     siteName: "pickyourtrail.com",
@@ -80,6 +127,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "bungee-jumping-bali",
     query: "bungee jumping in bali",
     category: "Adventure & Travel",
     siteName: "nusapenidaislands.com",
@@ -97,6 +145,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "villages-singapore",
     query: "villages in singapore",
     category: "History & Editorial",
     siteName: "traveltriangle.com",
@@ -114,6 +163,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "bali-packages-chennai",
     query: "bali packages from chennai",
     category: "Travel Bookings",
     siteName: "pickyourtrail.com",
@@ -131,6 +181,7 @@ const rankingData: RankingItem[] = [
     ]
   },
   {
+    id: "conveyor-solutions",
     query: "conveyor solutions",
     category: "Enterprise Manufacturing",
     siteName: "conveyorsolutionsindia.com",
@@ -221,7 +272,7 @@ export default function RankingsShowcase() {
                 const isSelected = selectedIdx === idx;
                 return (
                   <button
-                    key={item.query}
+                    key={item.id}
                     id={`ranking-btn-${idx}`}
                     onClick={() => setSelectedIdx(idx)}
                     className={`group text-left p-4 rounded-xl border transition-all duration-300 relative ${
@@ -365,8 +416,8 @@ export default function RankingsShowcase() {
                       className="flex flex-col gap-6"
                     >
                       {/* 1. Competitors ranked BEFORE (if applicable) */}
-                      {selectedItem.competitorsBefore?.map((comp) => (
-                        <div key={comp.url} className="opacity-40 group/comp">
+                      {selectedItem.competitorsBefore?.map((comp, compIdx) => (
+                        <div key={`comp-before-${comp.rank}-${compIdx}`} className="opacity-40 group/comp">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-[10px] text-gray-500 font-mono flex items-center gap-1">
                               <span>Rank #{comp.rank}</span>
@@ -427,7 +478,49 @@ export default function RankingsShowcase() {
 
                         {/* Search Result Meta Snippet (with AI Highlight markers if applicable) */}
                         <div className="text-xs md:text-sm text-gray-300 font-light leading-relaxed relative z-10">
-                          {selectedItem.isAIOverview && selectedItem.aiHighlights ? (
+                          {selectedItem.geminiScreenshot ? (
+                            <div className="space-y-3">
+                              <p className="text-xs text-gray-300">
+                                {selectedItem.snippet}
+                              </p>
+                              
+                              {/* Inline Screenshot Thumbnail Preview */}
+                              <div 
+                                onClick={() => {
+                                  const el = document.getElementById('gemini-results');
+                                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="relative rounded-xl overflow-hidden border border-white/10 bg-white cursor-pointer group/thumb"
+                              >
+                                <img
+                                  src={selectedItem.geminiScreenshot}
+                                  alt={selectedItem.title}
+                                  className="w-full h-auto object-contain max-h-[220px]"
+                                />
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white font-display text-xs font-semibold backdrop-blur-[2px]">
+                                  <Maximize2 className="w-4 h-4 text-growth" />
+                                  <span>Inspect Full Screenshot in Gemini AI Showcase &darr;</span>
+                                </div>
+                              </div>
+
+                              <div className="p-2.5 rounded-lg bg-growth/10 border border-growth/20 flex items-center justify-between text-[11px] font-mono">
+                                <span className="text-growth font-bold flex items-center gap-1.5">
+                                  <Sparkles className="w-3.5 h-3.5" />
+                                  Google Gemini #1 Recommendation
+                                </span>
+                                <button
+                                  onClick={() => {
+                                    const el = document.getElementById('gemini-results');
+                                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                  }}
+                                  className="text-white hover:text-growth flex items-center gap-1 transition-colors"
+                                >
+                                  <span>View 3 Hubs</span>
+                                  <ArrowRight className="w-3 h-3 text-growth" />
+                                </button>
+                              </div>
+                            </div>
+                          ) : selectedItem.isAIOverview && selectedItem.aiHighlights ? (
                             <div>
                               {/* Custom Rendering of the AI overview layout */}
                               <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-xs text-gray-300 leading-relaxed mb-3">
@@ -475,8 +568,8 @@ export default function RankingsShowcase() {
                       </div>
 
                       {/* 3. Competitors ranked AFTER (if applicable) */}
-                      {selectedItem.competitorsAfter?.map((comp) => (
-                        <div key={comp.url} className="opacity-40 group/comp">
+                      {selectedItem.competitorsAfter?.map((comp, compIdx) => (
+                        <div key={`comp-after-${comp.rank}-${compIdx}`} className="opacity-40 group/comp">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-[10px] text-gray-500 font-mono flex items-center gap-1">
                               <span>Rank #{comp.rank}</span>
@@ -516,6 +609,9 @@ export default function RankingsShowcase() {
           </div>
 
         </div>
+
+        {/* Gemini AI Recommendations Proof Showcase with User Uploaded Screenshots */}
+        <GeminiResultsShowcase />
 
         {/* AI Search & Organic SEO Visibility Telemetry Dashboard */}
         <div id="telemetry-dashboard" className="mt-20 border-t border-white/5 pt-16">

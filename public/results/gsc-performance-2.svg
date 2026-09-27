@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 360" width="100%" height="100%" fill="none">
+  <!-- Clean Canvas Background -->
+  <rect width="1100" height="360" rx="8" fill="#FFFFFF"/>
+
+  <!-- Top Metric Cards Grid -->
+  <!-- Card 1: Total Clicks (Active - Blue) -->
+  <g transform="translate(16, 12)">
+    <rect width="138" height="74" rx="4" fill="#1A73E8"/>
+    <!-- Checkbox checked -->
+    <rect x="12" y="12" width="15" height="15" rx="2" fill="#1A73E8" stroke="#FFFFFF" stroke-width="1.8"/>
+    <path d="M15 19.5 L18 22.5 L24 15.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="32" y="24" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FFFFFF">Total clicks</text>
+    <text x="12" y="58" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF">896</text>
+    <!-- Help Icon -->
+    <circle cx="124" cy="58" r="6" stroke="#FFFFFF" stroke-width="1.2" opacity="0.6" fill="none"/>
+    <text x="124" y="61.5" font-family="Roboto, sans-serif" font-size="8" fill="#FFFFFF" opacity="0.8" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Card 2: Total Impressions (Active - Purple) -->
+  <g transform="translate(154, 12)">
+    <rect width="144" height="74" rx="4" fill="#5E35B1"/>
+    <!-- Checkbox checked -->
+    <rect x="12" y="12" width="15" height="15" rx="2" fill="#5E35B1" stroke="#FFFFFF" stroke-width="1.8"/>
+    <path d="M15 19.5 L18 22.5 L24 15.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="32" y="24" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#FFFFFF">Total impressions</text>
+    <text x="12" y="58" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="500" fill="#FFFFFF">113k</text>
+    <!-- Help Icon -->
+    <circle cx="130" cy="58" r="6" stroke="#FFFFFF" stroke-width="1.2" opacity="0.6" fill="none"/>
+    <text x="130" y="61.5" font-family="Roboto, sans-serif" font-size="8" fill="#FFFFFF" opacity="0.8" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Card 3: Average CTR (Inactive) -->
+  <g transform="translate(298, 12)">
+    <rect width="138" height="74" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+    <!-- Checkbox unchecked -->
+    <rect x="12" y="12" width="15" height="15" rx="2" fill="#FFFFFF" stroke="#5F6368" stroke-width="1.8"/>
+    <text x="32" y="24" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5F6368">Average CTR</text>
+    <text x="12" y="58" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="400" fill="#3C4043">0.8%</text>
+    <!-- Help Icon -->
+    <circle cx="124" cy="58" r="6" stroke="#70757A" stroke-width="1.2" opacity="0.7" fill="none"/>
+    <text x="124" y="61.5" font-family="Roboto, sans-serif" font-size="8" fill="#70757A" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Card 4: Average Position (Inactive) -->
+  <g transform="translate(436, 12)">
+    <rect width="144" height="74" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+    <!-- Checkbox unchecked -->
+    <rect x="12" y="12" width="15" height="15" rx="2" fill="#FFFFFF" stroke="#5F6368" stroke-width="1.8"/>
+    <text x="32" y="24" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5F6368">Average position</text>
+    <text x="12" y="58" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="400" fill="#3C4043">47.1</text>
+    <!-- Help Icon -->
+    <circle cx="130" cy="58" r="6" stroke="#70757A" stroke-width="1.2" opacity="0.7" fill="none"/>
+    <text x="130" y="61.5" font-family="Roboto, sans-serif" font-size="8" fill="#70757A" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Top Right Dropdown: Daily -->
+  <g transform="translate(1005, 26)">
+    <rect width="78" height="32" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+    <text x="16" y="21" font-family="Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#3C4043">Daily</text>
+    <path d="M56 18 L60 22 L64 18" stroke="#5F6368" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Chart Area -->
+  <!-- Left Axis Label: Clicks -->
+  <text x="36" y="118" font-family="Roboto, sans-serif" font-size="11" fill="#70757A">Clicks</text>
+  <text x="36" y="142" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">30</text>
+  <text x="36" y="200" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">20</text>
+  <text x="36" y="258" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">10</text>
+  <text x="36" y="316" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">0</text>
+
+  <!-- Right Axis Label: Impressions -->
+  <text x="1064" y="118" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">Impressions</text>
+  <text x="1064" y="142" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">2.3k</text>
+  <text x="1064" y="200" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">1.5k</text>
+  <text x="1064" y="258" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">750</text>
+  <text x="1064" y="316" font-family="Roboto, sans-serif" font-size="11" fill="#70757A" text-anchor="end">0</text>
+
+  <!-- Horizontal Grid Lines -->
+  <line x1="42" y1="138" x2="1058" y2="138" stroke="#E8EAED" stroke-width="1"/>
+  <line x1="42" y1="196" x2="1058" y2="196" stroke="#E8EAED" stroke-width="1"/>
+  <line x1="42" y1="254" x2="1058" y2="254" stroke="#E8EAED" stroke-width="1"/>
+  <line x1="42" y1="312" x2="1058" y2="312" stroke="#BDC1C6" stroke-width="1.2"/>
+
+  <!-- Performance Curves -->
+  <!-- Purple Line: Impressions (Peaks at 2.3k near y=140, base around 750 near y=254) -->
+  <path d="M 42 248 
+           L 56 248 
+           L 70 246 
+           L 84 242 
+           L 98 185 
+           L 112 172 
+           L 126 215 
+           L 140 230 
+           L 154 246 
+           L 168 248 
+           L 182 238 
+           L 196 170 
+           L 210 185 
+           L 224 185 
+           L 238 210 
+           L 252 232 
+           L 266 200 
+           L 280 215 
+           L 294 235 
+           L 308 190 
+           L 322 205 
+           L 336 252 
+           L 350 230 
+           L 364 268 
+           L 378 245 
+           L 392 225 
+           L 406 205 
+           L 420 215 
+           L 434 238 
+           L 448 238 
+           L 462 235 
+           L 476 220 
+           L 490 235 
+           L 504 212 
+           L 518 225 
+           L 532 205 
+           L 546 225 
+           L 560 268 
+           L 574 250 
+           L 588 232 
+           L 602 212 
+           L 616 225 
+           L 630 245 
+           L 644 252 
+           L 658 260 
+           L 672 235 
+           L 686 230 
+           L 700 215 
+           L 714 185 
+           L 728 195 
+           L 742 200 
+           L 756 168 
+           L 770 178 
+           L 784 188 
+           L 798 198 
+           L 812 210 
+           L 826 168 
+           L 840 178 
+           L 854 225 
+           L 868 210 
+           L 882 195 
+           L 896 168 
+           L 910 152 
+           L 924 142 
+           L 938 148 
+           L 952 188 
+           L 966 178 
+           L 980 178 
+           L 994 200 
+           L 1008 165 
+           L 1022 178 
+           L 1036 195 
+           L 1050 255 
+           L 1058 240" 
+        fill="none" stroke="#5E35B1" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Blue Line: Clicks (Peaks at ~28-30 near y=142, base around 0-5 near y=312-285) -->
+  <path d="M 42 248 
+           L 56 295 
+           L 70 282 
+           L 84 300 
+           L 98 265 
+           L 112 270 
+           L 126 288 
+           L 140 270 
+           L 154 258 
+           L 168 270 
+           L 182 205 
+           L 196 168 
+           L 210 225 
+           L 224 210 
+           L 238 232 
+           L 252 268 
+           L 266 258 
+           L 280 282 
+           L 294 275 
+           L 308 258 
+           L 322 268 
+           L 336 275 
+           L 350 268 
+           L 364 248 
+           L 378 268 
+           L 392 245 
+           L 406 268 
+           L 420 238 
+           L 434 248 
+           L 448 282 
+           L 462 272 
+           L 476 265 
+           L 490 278 
+           L 504 298 
+           L 518 275 
+           L 532 282 
+           L 546 268 
+           L 560 310 
+           L 574 305 
+           L 588 275 
+           L 602 280 
+           L 616 300 
+           L 630 292 
+           L 644 285 
+           L 658 292 
+           L 672 278 
+           L 686 268 
+           L 700 275 
+           L 714 258 
+           L 728 235 
+           L 742 265 
+           L 756 258 
+           L 770 272 
+           L 784 285 
+           L 798 278 
+           L 812 265 
+           L 826 258 
+           L 840 270 
+           L 854 290 
+           L 868 305 
+           L 882 280 
+           L 896 270 
+           L 910 260 
+           L 924 238 
+           L 938 142 
+           L 952 242 
+           L 966 260 
+           L 980 280 
+           L 994 250 
+           L 1008 270 
+           L 1022 268 
+           L 1036 255 
+           L 1050 288 
+           L 1058 272" 
+        fill="none" stroke="#1A73E8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

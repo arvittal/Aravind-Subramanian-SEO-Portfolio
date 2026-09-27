@@ -1,4 +1,4 @@
-import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem } from './types';
+import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem, TestimonialItem } from './types';
 
 export const personalInfo = {
   name: 'Aravind Subramanian',
@@ -111,7 +111,15 @@ export const caseStudiesData: CaseStudyItem[] = [
       'Submitted sitemaps manually; indexed pages successfully within 3 days.'
     ],
     result: 'Organic traffic and customer leads doubled within a matter of weeks, proving the powerful impact of a structured local search architecture.',
-    longResult: 'This scalable template was then rolled out across secondary locations, maintaining identical content parameters which led to a 120% increase in total regional phone inquiries and localized form fills.'
+    longResult: 'This scalable template was then rolled out across secondary locations, maintaining identical content parameters which led to a 120% increase in total regional phone inquiries and localized form fills.',
+    gscProof: {
+      clicks: '896',
+      impressions: '113k',
+      ctr: '0.8%',
+      position: '47.1',
+      svgPath: '/results/gsc-performance-2.svg',
+      caption: 'Verified Google Search Console export: 113,000+ organic impressions and 896 high-intent clicks generated from regional expansion.'
+    }
   },
   {
     id: 'local-pack',
@@ -126,7 +134,15 @@ export const caseStudiesData: CaseStudyItem[] = [
       'Interlinked the local website and GBP to build reciprocal authority.'
     ],
     result: 'Successfully pushed the client into the coveted Google Maps "Local 3-Pack" for key industry searches.',
-    longResult: 'Helped the client acquire high-intent local customers directly through Maps, resulting in a 45% increase in store direction requests and a 60% surge in organic phone calls.'
+    longResult: 'Helped the client acquire high-intent local customers directly through Maps, resulting in a 45% increase in store direction requests and a 60% surge in organic phone calls.',
+    gscProof: {
+      clicks: '210',
+      impressions: '11.4k',
+      ctr: '1.8%',
+      position: '25.7',
+      svgPath: '/results/gsc-performance-1.svg',
+      caption: 'Verified Google Search Console export: 11,400+ targeted impressions with 1.8% CTR and top average position of 25.7.'
+    }
   }
 ];
 
@@ -242,5 +258,24 @@ export const clientsData: ClientItem[] = [
     name: 'Hi Tech Energy',
     logo: '/logos/hitech-energy.svg',
     alt: 'Hi Tech Energy Logo'
+  }
+];
+
+export const testimonialsData: TestimonialItem[] = [
+  {
+    id: 'prasanth',
+    name: 'Prasanth',
+    role: 'Client & Business Owner',
+    service: 'Website Design & Development',
+    content: 'Aravind has done a great website for me and happy with the customer I am getting',
+    rating: 5
+  },
+  {
+    id: 'prakash',
+    name: 'Prakash',
+    role: 'Client & Business Owner',
+    service: 'SEO Strategy & Customer Acquisition',
+    content: 'We had a website , we was not getting customers for our business and after plan given by aravind for seo , we got good customers',
+    rating: 5
   }
 ];

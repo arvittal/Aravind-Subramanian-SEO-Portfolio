@@ -22,6 +22,14 @@ export interface CaseStudyItem {
   strategy: string[];
   result: string;
   longResult: string;
+  gscProof?: {
+    clicks: string;
+    impressions: string;
+    ctr: string;
+    position: string;
+    svgPath: string;
+    caption: string;
+  };
 }
 
 export interface WorkItem {
@@ -44,4 +52,13 @@ export interface ClientItem {
   name: string;
   logo: string;
   alt: string;
+}
+
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  role?: string;
+  service: string;
+  content: string;
+  rating?: number;
 }

@@ -29,6 +29,7 @@ export default function Header({ activeSection }: HeaderProps) {
     { name: 'Skills', href: '#skills' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Case Studies', href: '#case-studies' },
+    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Work', href: '#work' },
     { name: 'Tools', href: '#tools' },
     { name: 'Contact', href: '#contact' },

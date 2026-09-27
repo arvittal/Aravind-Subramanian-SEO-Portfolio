@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, TrendingUp, Award, Layers, Users } from 'lucide-react';
 import { statsData } from '../data';
+import GoogleSearchConsoleShowcase from './GoogleSearchConsoleShowcase';
 
 // Custom lightweight scroll-triggered counter
 function AnimatedCounter({ value, duration = 1200 }: { value: number; duration?: number }) {
@@ -127,6 +128,9 @@ export default function Achievements() {
             );
           })}
         </div>
+
+        {/* Google Search Console Verified Performance Proof Showcase */}
+        <GoogleSearchConsoleShowcase />
 
         {/* Client validation summary */}
         <div className="mt-16 text-center">

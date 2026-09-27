@@ -1,10 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, ChevronUp, MapPin, Calendar, CheckSquare, Target, Trophy } from 'lucide-react';
+import { ChevronDown, ChevronUp, MapPin, Calendar, CheckSquare, Target, Trophy, ShieldCheck, BarChart3, Maximize2, X } from 'lucide-react';
 import { caseStudiesData } from '../data';
 
 export default function CaseStudies() {
   const [expandedId, setExpandedId] = useState<string | null>('location-seo');
+  const [zoomedProof, setZoomedProof] = useState<{ title: string; svgPath: string; clicks: string; impressions: string } | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setZoomedProof(null);
+    };
+    if (zoomedProof) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [zoomedProof]);
 
   const toggleExpand = (id: string) => {
     if (expandedId === id) {
@@ -165,6 +176,59 @@ export default function CaseStudies() {
                           </div>
                         </div>
 
+                        {/* Verified Google Search Console Proof Block */}
+                        {study.gscProof && (
+                          <div className="rounded-xl bg-dark-bg/80 border border-dark-border p-5 flex flex-col gap-4">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/5">
+                              <div className="flex items-center gap-2">
+                                <ShieldCheck className="w-4 h-4 text-growth" />
+                                <span className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+                                  Google Search Console Verified Performance
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2 text-xs font-mono">
+                                <span className="px-2 py-0.5 rounded bg-[#1A73E8]/10 text-[#4285F4] border border-[#1A73E8]/20 font-bold">
+                                  {study.gscProof.clicks} Clicks
+                                </span>
+                                <span className="px-2 py-0.5 rounded bg-[#5E35B1]/10 text-purple-400 border border-[#5E35B1]/20 font-bold">
+                                  {study.gscProof.impressions} Impressions
+                                </span>
+                                <span className="px-2 py-0.5 rounded bg-white/5 text-gray-300 border border-white/10">
+                                  CTR {study.gscProof.ctr}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Screenshot Preview with Zoom Click */}
+                            <div
+                              onClick={() => setZoomedProof({
+                                title: study.title,
+                                svgPath: study.gscProof!.svgPath,
+                                clicks: study.gscProof!.clicks,
+                                impressions: study.gscProof!.impressions
+                              })}
+                              className="relative rounded-lg overflow-hidden border border-white/10 group/proof cursor-pointer bg-white"
+                            >
+                              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/proof:opacity-100 transition-opacity flex items-center justify-center z-10">
+                                <div className="px-3.5 py-1.5 rounded-full bg-dark-bg/90 border border-growth/40 text-white font-mono text-xs flex items-center gap-1.5 shadow-lg">
+                                  <Maximize2 className="w-3.5 h-3.5 text-growth" />
+                                  <span>Click to view full Search Console report</span>
+                                </div>
+                              </div>
+                              <img
+                                src={study.gscProof.svgPath}
+                                alt={`Google Search Console proof for ${study.title}`}
+                                className="w-full h-auto object-contain block"
+                                loading="lazy"
+                              />
+                            </div>
+
+                            <p className="text-xs text-gray-400 font-mono italic">
+                              {study.gscProof.caption}
+                            </p>
+                          </div>
+                        )}
+
                       </div>
                     </motion.div>
                   )}
@@ -175,6 +239,66 @@ export default function CaseStudies() {
         </div>
 
       </div>
+
+      {/* Lightbox Modal for Case Studies */}
+      <AnimatePresence>
+        {zoomedProof && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setZoomedProof(null)}
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md p-4 md:p-8 flex items-center justify-center"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-6xl w-full bg-dark-card border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+            >
+              <div className="px-6 py-4 bg-[#111419] border-b border-white/[0.08] flex items-center justify-between">
+                <div>
+                  <h4 className="text-white font-display font-bold text-base md:text-lg flex items-center gap-2">
+                    {zoomedProof.title}
+                    <span className="text-xs font-mono text-growth bg-growth/10 border border-growth/20 px-2 py-0.5 rounded">
+                      Google Search Console
+                    </span>
+                  </h4>
+                  <div className="text-xs text-gray-400 font-mono mt-0.5">
+                    {zoomedProof.clicks} Organic Clicks · {zoomedProof.impressions} Search Impressions
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setZoomedProof(null)}
+                  className="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="p-4 md:p-6 overflow-auto bg-[#07090D] flex items-center justify-center">
+                <img
+                  src={zoomedProof.svgPath}
+                  alt={zoomedProof.title}
+                  className="max-w-full h-auto object-contain rounded-lg border border-white/10 shadow-2xl bg-white"
+                />
+              </div>
+
+              <div className="px-6 py-3 bg-[#111419] border-t border-white/[0.08] flex items-center justify-between text-xs text-gray-400 font-mono">
+                <span>Verified Google Performance Data Export</span>
+                <button
+                  onClick={() => setZoomedProof(null)}
+                  className="text-growth hover:underline"
+                >
+                  Close [Esc]
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

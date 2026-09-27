@@ -179,24 +179,6 @@ const rankingData: RankingItem[] = [
         snippet: "Book Bali Tour Packages from Chennai at best prices. Choose from a wide range of custom travel packages with flights, sightseeing, and premium guides."
       }
     ]
-  },
-  {
-    id: "conveyor-solutions",
-    query: "conveyor solutions",
-    category: "Enterprise Manufacturing",
-    siteName: "conveyorsolutionsindia.com",
-    url: "https://conveyorsolutionsindia.com",
-    title: "Conveyor Solutions India Pvt Ltd - Ambattur Industrial Estate",
-    snippet: "Conveyor Solutions India Pvt Ltd is one of the leading manufacturers of custom conveyor systems, automated assembly lines, and material handling solutions.",
-    rank: 2,
-    competitorsAfter: [
-      {
-        rank: 3,
-        url: "https://www.indiamart.com",
-        title: "Conveyor Systems & Belts in Chennai, Tamil Nadu",
-        snippet: "Find listings of conveyor belt manufacturers, traders, and suppliers in Chennai. Get latest prices, company profiles, and technical catalogs..."
-      }
-    ]
   }
 ];
 

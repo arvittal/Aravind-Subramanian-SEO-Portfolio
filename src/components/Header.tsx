@@ -26,6 +26,7 @@ export default function Header({ activeSection }: HeaderProps) {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Rankings', href: '#rankings' },
+    { name: 'Content', href: '#content-portfolio' },
     { name: 'Skills', href: '#skills' },
     { name: 'Achievements', href: '#achievements' },
     { name: 'Case Studies', href: '#case-studies' },

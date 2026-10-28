@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Sparkles, ExternalLink, ArrowRight, ShieldCheck, Trophy, Landmark, ArrowUpRight, CheckCircle2, ChevronRight, CornerDownRight, Maximize2, Bot } from 'lucide-react';
+import { Search, Sparkles, ExternalLink, ArrowRight, ShieldCheck, Trophy, Landmark, ArrowUpRight, CheckCircle2, ChevronRight, CornerDownRight, Maximize2, Bot, Play, Pause } from 'lucide-react';
 import GeminiResultsShowcase from './GeminiResultsShowcase';
 
 interface RankingItem {
@@ -130,19 +130,11 @@ const rankingData: RankingItem[] = [
     id: "bungee-jumping-bali",
     query: "bungee jumping in bali",
     category: "Adventure & Travel",
-    siteName: "nusapenidaislands.com",
-    url: "https://nusapenidaislands.com/bali/bungee-jumping",
-    title: "Nusa Penida Bungee Jumping Tour & Guides",
-    snippet: "Experience the thrill of bungee jumping and the beauty of snorkeling with manta rays on Nusa Penida. An unforgettable adventure awaits!",
-    rank: 2,
-    competitorsAfter: [
-      {
-        rank: 3,
-        url: "https://pickyourtrail.com/bali/bungee",
-        title: "Everything You Need to Know About Bungee Jumping in Bali",
-        snippet: "Planning a bungee jump in Bali? From safety measures to the best spots and cost guides, here is everything you need to know about..."
-      }
-    ]
+    siteName: "pickyourtrail.com",
+    url: "https://pickyourtrail.com/bali/bungee",
+    title: "Everything You Need to Know About Bungee Jumping in Bali",
+    snippet: "Planning a bungee jump in Bali? From safety measures to the best spots and cost guides, here is everything you need to know about bungee jumping in Bali.",
+    rank: 3
   },
   {
     id: "villages-singapore",
@@ -187,8 +179,30 @@ export default function RankingsShowcase() {
   const [typedQuery, setTypedQuery] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [isAutoScrollEnabled, setIsAutoScrollEnabled] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const listContainerRef = useRef<HTMLDivElement>(null);
 
   const selectedItem = rankingData[selectedIdx];
+
+  // Auto-scroll loop: automatically transitions through ranking query cards
+  useEffect(() => {
+    if (!isAutoScrollEnabled || isHovered) return;
+
+    const interval = setInterval(() => {
+      setSelectedIdx((prev) => (prev + 1) % rankingData.length);
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [isAutoScrollEnabled, isHovered]);
+
+  // Smooth scroll active query card into view when selectedIdx changes
+  useEffect(() => {
+    const activeBtn = document.getElementById(`ranking-btn-${selectedIdx}`);
+    if (activeBtn && listContainerRef.current) {
+      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [selectedIdx]);
 
   // Simulated Google search typing effect when selected query changes
   useEffect(() => {
@@ -243,13 +257,44 @@ export default function RankingsShowcase() {
           
           {/* Left Column: List of keywords/proof points */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <div className="p-4 rounded-t-2xl border-b border-white/5 bg-dark-card/60 backdrop-blur-md">
-              <span className="text-xs font-mono tracking-widest text-gray-500 uppercase">
-                SELECT KEYWORD EVIDENCE
-              </span>
+            <div className="p-3.5 px-4 rounded-t-2xl border-b border-white/5 bg-dark-card/60 backdrop-blur-md flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono tracking-widest text-gray-500 uppercase">
+                  KEYWORD EVIDENCE
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-growth/10 border border-growth/20 text-growth">
+                  <span className={`w-1.5 h-1.5 rounded-full ${isAutoScrollEnabled && !isHovered ? 'bg-growth animate-ping' : 'bg-gray-500'}`} />
+                  {isAutoScrollEnabled ? (isHovered ? 'Paused (hover)' : 'Auto-scrolling') : 'Paused'}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsAutoScrollEnabled((prev) => !prev)}
+                title={isAutoScrollEnabled ? "Pause automatic scrolling" : "Resume automatic scrolling"}
+                className="flex items-center gap-1.5 text-[11px] font-mono text-gray-400 hover:text-white px-2.5 py-1 rounded-md border border-white/5 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+              >
+                {isAutoScrollEnabled ? (
+                  <>
+                    <Pause className="w-3 h-3 text-growth" />
+                    <span>Pause</span>
+                  </>
+                ) : (
+                  <>
+                    <Play className="w-3 h-3 text-growth" />
+                    <span>Resume</span>
+                  </>
+                )}
+              </button>
             </div>
 
-            <div className="flex flex-col gap-2.5 max-h-[580px] overflow-y-auto pr-2 no-scrollbar">
+            <div
+              ref={listContainerRef}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onTouchStart={() => setIsHovered(true)}
+              onTouchEnd={() => setTimeout(() => setIsHovered(false), 2500)}
+              className="flex flex-col gap-2.5 max-h-[580px] overflow-y-auto pr-2 scroll-smooth"
+            >
               {rankingData.map((item, idx) => {
                 const isSelected = selectedIdx === idx;
                 return (

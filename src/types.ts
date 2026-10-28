@@ -62,3 +62,16 @@ export interface TestimonialItem {
   content: string;
   rating?: number;
 }
+
+export interface BlogPostItem {
+  id: string;
+  title: string;
+  url: string;
+  domain: string;
+  client: string;
+  category: 'Industrial & Energy B2B' | 'Travel & Tourism' | 'SEO & Strategy';
+  targetKeyword: string;
+  strategyHighlight: string;
+  readTime: string;
+  featured?: boolean;
+}

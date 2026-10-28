@@ -1,4 +1,4 @@
-import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem, TestimonialItem } from './types';
+import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem, TestimonialItem, BlogPostItem } from './types';
 
 export const personalInfo = {
   name: 'Aravind Subramanian',
@@ -277,5 +277,121 @@ export const testimonialsData: TestimonialItem[] = [
     service: 'SEO Strategy & Customer Acquisition',
     content: 'We had a website , we was not getting customers for our business and after plan given by aravind for seo , we got good customers',
     rating: 5
+  }
+];
+
+export const blogPortfolioData: BlogPostItem[] = [
+  {
+    id: 'hitech-gas-pipeline-maintenance',
+    title: 'Gas Pipeline Maintenance Guide: Best Practices, Safety Protocols & Inspection Checklists',
+    url: 'https://www.hitechenergy.org/blog/gas-pipeline-maintenance-guide',
+    domain: 'hitechenergy.org',
+    client: 'Hi-Tech Energy',
+    category: 'Industrial & Energy B2B',
+    targetKeyword: 'Gas Pipeline Maintenance Guide',
+    strategyHighlight: 'Long-form technical authority guide built with safety inspection checklists and preventive protocols to capture B2B facility manager intent.',
+    readTime: '7 min read',
+    featured: true
+  },
+  {
+    id: 'hitech-domestic-lpg-pipeline-vs-cylinder',
+    title: 'Domestic LPG Pipeline vs Cylinder: Safety, Cost & Efficiency Comparison',
+    url: 'https://www.hitechenergy.org/blog/domestic-lpg-pipeline-vs-cylinder',
+    domain: 'hitechenergy.org',
+    client: 'Hi-Tech Energy',
+    category: 'Industrial & Energy B2B',
+    targetKeyword: 'Domestic LPG Pipeline vs Cylinder',
+    strategyHighlight: 'Transactional comparison architecture addressing homeowner and residential community safety, capital cost, and monthly savings.',
+    readTime: '6 min read'
+  },
+  {
+    id: 'hitech-lpg-manifold-vs-gas-header',
+    title: 'LPG Manifold vs Gas Header: Industrial Specifications & System Differences',
+    url: 'https://www.hitechenergy.org/blog/lpg-manifold-vs-gas-header',
+    domain: 'hitechenergy.org',
+    client: 'Hi-Tech Energy',
+    category: 'Industrial & Energy B2B',
+    targetKeyword: 'LPG Manifold vs Gas Header',
+    strategyHighlight: 'Engineering specification breakdown optimized for high-value industrial gas distribution inquiries and commercial piping queries.',
+    readTime: '5 min read'
+  },
+  {
+    id: 'many2go-singapore-winter',
+    title: 'Visiting Singapore in Winter: Weather, Festivals, Packing & Itinerary Guide',
+    url: 'https://many2go.in/blog/singapore-in-winter',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Singapore in Winter',
+    strategyHighlight: 'Seasonal search intent capture targeting holidaymakers traveling between November and February with custom holiday itinerary funnels.',
+    readTime: '8 min read',
+    featured: true
+  },
+  {
+    id: 'many2go-singapore-summer',
+    title: 'Singapore in Summer: Best Places to Visit, Events & Indoor Attractions',
+    url: 'https://many2go.in/blog/singapore-in-summer',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Singapore in Summer',
+    strategyHighlight: 'Topical cluster strategy targeting peak summer family vacation inquiries with air-conditioned attractions and Great Singapore Sale tips.',
+    readTime: '7 min read'
+  },
+  {
+    id: 'many2go-singapore-spring',
+    title: 'Exploring Singapore in Spring: Climate, Flower Dome Blossoms & City Highlights',
+    url: 'https://many2go.in/blog/singapore-in-spring',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Singapore in Spring',
+    strategyHighlight: 'Intent optimization capturing shoulder-season budget travelers and floral exhibition tourists at Gardens by the Bay.',
+    readTime: '6 min read'
+  },
+  {
+    id: 'many2go-thailand-summer',
+    title: 'Thailand in Summer: Islands, Monsoon Secrets, Budget Travel & Night Markets',
+    url: 'https://many2go.in/blog/thailand-in-summer',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Thailand in Summer',
+    strategyHighlight: 'Off-season search volume capture showing favorable Gulf islands (Koh Samui) during monsoon months to maintain tour bookings.',
+    readTime: '8 min read'
+  },
+  {
+    id: 'many2go-thailand-spring',
+    title: 'Thailand in Spring: Songkran Festival, Beaches & Best Sightseeing Spots',
+    url: 'https://many2go.in/blog/thailand-in-spring',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Thailand in Spring',
+    strategyHighlight: 'High-surge event targeting aligned with Songkran water festival and April holiday travel spikes across Bangkok and Phuket.',
+    readTime: '7 min read'
+  },
+  {
+    id: 'many2go-thailand-autumn',
+    title: 'Thailand in Autumn: Lantern Festivals, Pleasant Weather & Island Hopping',
+    url: 'https://many2go.in/blog/thailand-in-autumn',
+    domain: 'many2go.in',
+    client: 'Many2Go Holidays',
+    category: 'Travel & Tourism',
+    targetKeyword: 'Thailand in Autumn',
+    strategyHighlight: 'Capturing high search interest for Yi Peng and Loy Krathong lantern festivals in Chiang Mai alongside opening beach seasons.',
+    readTime: '7 min read'
+  },
+  {
+    id: 'aravind-digital-marketing-bangalore',
+    title: 'Digital Marketing Freelancer in Bangalore: Complete Guide to Organic Growth & ROI',
+    url: 'https://aravindsubramanian.com/blog/digital-marketing-freelancer-in-bangalore/',
+    domain: 'aravindsubramanian.com',
+    client: 'Aravind Subramanian',
+    category: 'SEO & Strategy',
+    targetKeyword: 'Digital Marketing Freelancer in Bangalore',
+    strategyHighlight: 'Competitive pillar guide dominating high-value commercial tech queries in India\'s Silicon Valley to drive direct freelance consultations.',
+    readTime: '10 min read',
+    featured: true
   }
 ];

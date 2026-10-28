@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Achievements from './components/Achievements';
 import CaseStudies from './components/CaseStudies';
 import Testimonials from './components/Testimonials';
+import ContentPortfolio from './components/ContentPortfolio';
 import Work from './components/Work';
 import Tools from './components/Tools';
 import Contact from './components/Contact';
@@ -18,7 +19,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    const sections = ['hero', 'about', 'clients', 'rankings', 'skills', 'achievements', 'case-studies', 'testimonials', 'work', 'tools', 'contact'];
+    const sections = ['hero', 'about', 'clients', 'rankings', 'content-portfolio', 'skills', 'achievements', 'case-studies', 'testimonials', 'work', 'tools', 'contact'];
     
     const handleScrollSpy = () => {
       const scrollPosition = window.scrollY + 120; // offset of header and buffer
@@ -61,6 +62,7 @@ export default function App() {
         <About />
         <Clients />
         <RankingsShowcase />
+        <ContentPortfolio />
         <Skills />
         <Achievements />
         <CaseStudies />

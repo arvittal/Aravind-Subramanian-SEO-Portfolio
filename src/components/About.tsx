@@ -72,7 +72,7 @@ export default function About() {
               <div className="space-y-3.5 border-t border-white/5 pt-5 text-sm text-gray-400">
                 <div className="flex items-center gap-3">
                   <Calendar className="w-4 h-4 text-growth/70" />
-                  <span>3+ Years Professional SEO Freelancer</span>
+                  <span>3+ Years Professional SEO Consultant</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Briefcase className="w-4 h-4 text-growth/70" />

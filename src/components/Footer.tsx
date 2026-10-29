@@ -23,7 +23,7 @@ export default function Footer() {
             {personalInfo.name}
           </span>
           <p className="text-xs text-gray-500 mt-1 font-mono tracking-widest uppercase">
-            SEO Specialist & Digital Marketing Freelancer
+            {personalInfo.title}
           </p>
         </div>
 

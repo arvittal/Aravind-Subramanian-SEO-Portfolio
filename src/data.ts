@@ -2,7 +2,7 @@ import { StatItem, SkillItem, CaseStudyItem, WorkItem, ToolItem, ClientItem, Tes
 
 export const personalInfo = {
   name: 'Aravind Subramanian',
-  title: 'SEO Specialist & Digital Marketing Freelancer',
+  title: 'SEO Specialist & Digital Marketing Consultant',
   experience: '3+ Years of Experience',
   email: 'aravindsubramanian31@gmail.com',
   phone: '8056225925',
@@ -17,7 +17,7 @@ export const personalInfo = {
     'Data-Driven SEO Strategist'
   ],
   bio: {
-    main: "I'm Aravind Subramanian, an SEO Specialist & Digital Marketing Freelancer with 3+ years of experience helping businesses scale their organic reach.",
+    main: "I'm Aravind Subramanian, an SEO Specialist & Digital Marketing Consultant with 3+ years of experience helping businesses scale their organic reach.",
     description: "I've worked across multiple high-growth industries including Travel, EdTech, Automation, and Export & Import. By building comprehensive, custom-tailored search strategies, I help brand properties rank higher on search engines, secure more valuable keywords, and drive sustainable organic traffic growth that translates directly into conversions and revenue."
   }
 };
@@ -384,13 +384,13 @@ export const blogPortfolioData: BlogPostItem[] = [
   },
   {
     id: 'aravind-digital-marketing-bangalore',
-    title: 'Digital Marketing Freelancer in Bangalore: Complete Guide to Organic Growth & ROI',
+    title: 'Digital Marketing Consultant in Bangalore: Complete Guide to Organic Growth & ROI',
     url: 'https://aravindsubramanian.com/blog/digital-marketing-freelancer-in-bangalore/',
     domain: 'aravindsubramanian.com',
     client: 'Aravind Subramanian',
     category: 'SEO & Strategy',
-    targetKeyword: 'Digital Marketing Freelancer in Bangalore',
-    strategyHighlight: 'Competitive pillar guide dominating high-value commercial tech queries in India\'s Silicon Valley to drive direct freelance consultations.',
+    targetKeyword: 'Digital Marketing Consultant in Bangalore',
+    strategyHighlight: 'Competitive pillar guide dominating high-value commercial tech queries in India\'s Silicon Valley to drive direct high-ticket consulting partnerships.',
     readTime: '10 min read',
     featured: true
   }

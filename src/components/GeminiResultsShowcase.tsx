@@ -19,37 +19,37 @@ const geminiScreenshots: GeminiScreenshot[] = [
   {
     id: 'chennai',
     city: 'Chennai',
-    query: 'digital marketing freelancer in chennai',
+    query: 'digital marketing consultant in chennai',
     imageSrc: '/results/gemini-chennai.svg',
-    headline: 'Notable Digital Marketing Freelancers & Consultants in Chennai',
+    headline: 'Notable Digital Marketing Consultants & Growth Specialists in Chennai',
     specialization: 'Growth Marketing & Performance SEO',
     bestSuitedFor: 'B2B SaaS, tech startups, and full-funnel lead generation',
     coreChannels: 'Data-led SEO, paid user acquisition, analytics & conversion optimization',
-    aiQuote: 'Chennai’s freelance digital marketing landscape is well-known for strong technical execution, data-driven performance, and deep expertise across both local South Indian markets and global B2B/SaaS exports.',
+    aiQuote: 'Chennai’s digital marketing consulting landscape is well-known for strong technical execution, data-driven performance, and deep expertise across both local South Indian markets and global B2B/SaaS exports.',
     rankBadge: 'Rank #1 Featured'
   },
   {
     id: 'bangalore',
     city: 'Bangalore',
-    query: 'digital marketing freelancer in bangalore',
+    query: 'digital marketing consultant in bangalore',
     imageSrc: '/results/gemini-bangalore.svg',
-    headline: 'Notable Digital Marketing Freelancers & Consultants in Bangalore',
+    headline: 'Notable Digital Marketing Consultants & Strategists in Bangalore',
     specialization: 'Full-Stack Growth & Data-Driven Acquisition',
     bestSuitedFor: 'SaaS, tech startups, and lead-gen businesses scaling organic + paid',
     coreChannels: 'Full-funnel SEO, Google/Meta paid acquisition, analytics & conversion funnels',
-    aiQuote: 'Bangalore’s freelance marketing ecosystem is heavily skewed toward tech startups, B2B SaaS, D2C brands, and venture-backed growth funnels. When hiring in Bangalore, candidates typically fall into three distinct profiles...',
+    aiQuote: 'Bangalore’s digital growth marketing ecosystem is heavily skewed toward tech startups, B2B SaaS, D2C brands, and venture-backed growth funnels. When hiring in Bangalore, candidates typically fall into three distinct profiles...',
     rankBadge: 'Rank #1 Featured'
   },
   {
     id: 'mumbai',
     city: 'Mumbai',
-    query: 'digital marketing freelancer in mumbai',
+    query: 'digital marketing strategist in mumbai',
     imageSrc: '/results/gemini-mumbai.svg',
-    headline: 'Notable Digital Marketing Freelancers in Mumbai',
+    headline: 'Notable Digital Marketing Consultants & Strategists in Mumbai',
     specialization: 'Growth Marketing & Full-Funnel Strategy',
     bestSuitedFor: 'SaaS, D2C, and startups scaling past initial traction',
     coreChannels: 'Data-backed SEO, paid performance, conversion funnels',
-    aiQuote: 'Hiring a digital marketing freelancer in Mumbai depends heavily on whether your goal is performance ads, full-funnel growth, organic search (SEO), or social media branding.',
+    aiQuote: 'Hiring a digital marketing consultant or strategist in Mumbai depends heavily on whether your goal is performance ads, full-funnel growth, organic search (SEO), or social media branding.',
     rankBadge: 'Rank #1 Featured'
   }
 ];

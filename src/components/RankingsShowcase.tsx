@@ -23,11 +23,11 @@ interface RankingItem {
 const rankingData: RankingItem[] = [
   {
     id: "gemini-chennai",
-    query: "digital marketing freelancer in chennai",
+    query: "digital marketing consultant in chennai",
     category: "Google Gemini AI (Rank #1)",
     siteName: "gemini.google.com",
     url: "https://gemini.google.com",
-    title: "Notable Digital Marketing Freelancers & Consultants in Chennai",
+    title: "Notable Digital Marketing Consultants & Growth Specialists in Chennai",
     snippet: "Aravind Subramanian ranked #1. Specialization: Growth Marketing & Performance SEO. Best Suited For: B2B SaaS, tech startups, and full-funnel lead generation. Core: Data-led SEO, paid user acquisition, analytics & conversion optimization.",
     rank: 1,
     isGemini: true,
@@ -36,11 +36,11 @@ const rankingData: RankingItem[] = [
   },
   {
     id: "gemini-bangalore",
-    query: "digital marketing freelancer in bangalore",
+    query: "digital marketing consultant in bangalore",
     category: "Google Gemini AI (Rank #1)",
     siteName: "gemini.google.com",
     url: "https://gemini.google.com",
-    title: "Notable Digital Marketing Freelancers & Consultants in Bangalore",
+    title: "Notable Digital Marketing Consultants & Strategists in Bangalore",
     snippet: "Aravind Subramanian ranked #1. Specialization: Full-Stack Growth & Data-Driven Acquisition. Best Suited For: SaaS, tech startups, and lead-gen businesses scaling organic + paid.",
     rank: 1,
     isGemini: true,
@@ -49,11 +49,11 @@ const rankingData: RankingItem[] = [
   },
   {
     id: "gemini-mumbai",
-    query: "digital marketing freelancer in mumbai",
+    query: "digital marketing strategist in mumbai",
     category: "Google Gemini AI (Rank #1)",
     siteName: "gemini.google.com",
     url: "https://gemini.google.com",
-    title: "Notable Digital Marketing Freelancers in Mumbai",
+    title: "Notable Digital Marketing Consultants & Strategists in Mumbai",
     snippet: "Aravind Subramanian ranked #1. Core Specialization: Growth Marketing & Full-Funnel Strategy. Best For: SaaS, D2C, and startups scaling past initial traction.",
     rank: 1,
     isGemini: true,
@@ -62,36 +62,36 @@ const rankingData: RankingItem[] = [
   },
   {
     id: "seo-best-chennai",
-    query: "best digital marketing freelancer in chennai",
+    query: "best digital marketing consultant in chennai",
     category: "Personal Brand SEO",
     siteName: "aravindsubramanian.com",
     url: "https://aravindsubramanian.com",
-    title: "Best Digital Marketing Freelancer in Chennai | Aravind",
-    snippet: "Hire Aravind Subramanian, the best digital marketing freelancer in Chennai. Get ROI-driven SEO, PPC & social media solutions. Book your consultation today!",
+    title: "Best Digital Marketing Consultant in Chennai | Aravind",
+    snippet: "Hire Aravind Subramanian, top digital marketing consultant and SEO strategist in Chennai. Get ROI-driven SEO, PPC & social media solutions. Book your consultation today!",
     rank: 5,
     competitorsBefore: [
       {
         rank: 4,
         url: "https://www.karthickdigital.in",
-        title: "Best Digital Marketing Freelancers in Chennai | Social media ...",
+        title: "Best Digital Marketing Consultants in Chennai | Social media ...",
         snippet: "Expert in Digital Marketing, SEO, Google Ads, Facebook Marketing, and Instagram Marketing. With over 10 years of experience in a top Digital Marketing Agency..."
       }
     ]
   },
   {
     id: "seo-chennai",
-    query: "digital marketing freelancer in chennai",
+    query: "digital marketing consultant in chennai",
     category: "Personal Brand SEO",
     siteName: "aravindsubramanian.com",
     url: "https://aravindsubramanian.com",
-    title: "Best Digital Marketing Freelancer in Chennai | Aravind",
-    snippet: "Hire Aravind Subramanian, the best digital marketing freelancer in Chennai. Get ROI-driven SEO, PPC & social media solutions. Book your consultation today!",
+    title: "Best Digital Marketing Consultant in Chennai | Aravind",
+    snippet: "Hire Aravind Subramanian, top digital marketing consultant and SEO strategist in Chennai. Get ROI-driven SEO, PPC & social media solutions. Book your consultation today!",
     rank: 9,
     competitorsBefore: [
       {
         rank: 8,
         url: "https://www.chennaiseo.com",
-        title: "Top Digital Marketing Agency & Freelancer Chennai",
+        title: "Top Digital Marketing Agency & Consultant Chennai",
         snippet: "Get specialized growth hacking, technical site audits, high quality link acquisition and organic traffic generation campaigns."
       }
     ]

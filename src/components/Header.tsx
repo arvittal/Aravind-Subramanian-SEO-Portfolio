@@ -75,7 +75,7 @@ export default function Header({ activeSection }: HeaderProps) {
               {personalInfo.name}
             </span>
             <span className="text-[10px] font-mono tracking-widest text-gray-500 uppercase group-hover:text-growth/70 transition-colors mt-0.5">
-              TOP 1% SEO FREELANCER
+              TOP 1% SEO CONSULTANT
             </span>
           </a>
 
